@@ -39,7 +39,7 @@ $NotifyAt = 14,7,3
 
             <p style='font-family:Lucida'>Please follow the next steps to change your password.</p>
                 <ul style='font-family:Lucida'>
-					<li>Login into <a href='https://portal.office.com/'>Office365</a></li>
+		    <li>Login into <a href='https://portal.office.com/'>Office365</a></li>
                     <li>In the top right corner, click your picture</li>
                     <li>Select the 'Change Password' option</li>
                     <li>Type your current password</li>
@@ -49,7 +49,7 @@ $NotifyAt = 14,7,3
 
             <p style='font-family:Lucida'>Requirements for the password are as follows:</p>
                 <ul style='font-family:Lucida'>
-					<li>Must contain at least 8 characters</li>
+		    <li>Must contain at least 8 characters</li>
                     <li>Contain characters from three of the following four categories:</li>
                     <li>English uppercase characters (A through Z)</li>
                     <li>English lowercase characters (a through z)</li>
@@ -58,7 +58,7 @@ $NotifyAt = 14,7,3
                 </ul>
             <p style='font-family:Lucida'>For any assistance, please submit a <a href='https://aservicedeskportal.ifexisting'>Service Desk Ticket</a></p>
 
-			<p style='font-family:Lucida'><b>Company Technology Team</b></p>
+	    <p style='font-family:Lucida'><b>Company Technology Team</b></p>
             "          
            }
         else{
@@ -68,7 +68,7 @@ $NotifyAt = 14,7,3
 
             <p style='font-family:Lucida'>Requirements for the password are as follows:</p>
                 <ul style='font-family:Lucida'>
-					<li>Must contain at least 8 characters</li>
+		    <li>Must contain at least 8 characters</li>
                     <li>Contain characters from three of the following four categories:</li>
                     <li>English uppercase characters (A through Z)</li>
                     <li>English lowercase characters (a through z)</li>
@@ -77,7 +77,7 @@ $NotifyAt = 14,7,3
                 </ul>
             <p style='font-family:Lucida'>For any assistance, please submit a <a href='https://aservicedeskportal.ifexisting'>Service Desk Ticket</a></p>
 
-			<p style='font-family:Lucida'><b>Company Technology Team</b></p>
+	    <p style='font-family:Lucida'><b>Company Technology Team</b></p>
             "          
             }
 

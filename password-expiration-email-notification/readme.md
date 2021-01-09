@@ -4,13 +4,14 @@ Users at your company keep ignoring, missing or "not getting" the Windows notifi
 
 With this script you can spam their mailbox and reduce the chances of them not changing their password in time by 2%. Because many will still not change it in time...
 
-The script check for two type of user in AD, one in the remote group meaning someone working for home not connected to the network physically or over vpn and that could only update password from Office365 portal, and the other for those who are working from an office or over vpn being able to update their password from windows.
+The script check for two type of user in AD, one in the remote group meaning someone working from home not connected to the network physically or over a vpn and that could only update password from Office365 portal, and the other for those who are working from an office or over a vpn being able to update their password from windows.
+
+The script will send a different email for each of the two cases.
 
 You can remove your email from the bcc field to not get each of the emails but I had it for testing.
 
 
 ```
-
 Import-Module ActiveDirectory
 
 $maxPasswordAgeTimeSpan = (Get-ADDefaultDomainPasswordPolicy).maxPasswordAge
@@ -38,7 +39,7 @@ $NotifyAt = 14,7,3
 
             <p style='font-family:Lucida'>Please follow the next steps to change your password.</p>
                 <ul style='font-family:Lucida'>
-					<li>Login into <a href='https://portal.office.com/'>Office365</a></li>
+		    <li>Login into <a href='https://portal.office.com/'>Office365</a></li>
                     <li>In the top right corner, click your picture</li>
                     <li>Select the 'Change Password' option</li>
                     <li>Type your current password</li>
@@ -48,7 +49,7 @@ $NotifyAt = 14,7,3
 
             <p style='font-family:Lucida'>Requirements for the password are as follows:</p>
                 <ul style='font-family:Lucida'>
-					<li>Must contain at least 8 characters</li>
+		    <li>Must contain at least 8 characters</li>
                     <li>Contain characters from three of the following four categories:</li>
                     <li>English uppercase characters (A through Z)</li>
                     <li>English lowercase characters (a through z)</li>
@@ -67,7 +68,7 @@ $NotifyAt = 14,7,3
 
             <p style='font-family:Lucida'>Requirements for the password are as follows:</p>
                 <ul style='font-family:Lucida'>
-					<li>Must contain at least 8 characters</li>
+		    <li>Must contain at least 8 characters</li>
                     <li>Contain characters from three of the following four categories:</li>
                     <li>English uppercase characters (A through Z)</li>
                     <li>English lowercase characters (a through z)</li>
@@ -88,5 +89,4 @@ $NotifyAt = 14,7,3
 
         }
     }
-
 ```
