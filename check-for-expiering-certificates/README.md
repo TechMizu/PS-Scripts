@@ -10,7 +10,7 @@ I have not had need for this ever since, but this can be helpful to someone.
 
 This can be run daily from a task schedule.
 
-`` 
+```
 #Number of days for certificate expiration threshold
 $Threshold = 30
  
@@ -113,4 +113,4 @@ Remove-Variable SMTPServer, From, To, Subject, Body -ErrorAction SilentlyContinu
  
 #endregion
 
-``
+```
