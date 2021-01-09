@@ -11,13 +11,13 @@ I have not had need for this ever since, but this can be helpful to someone.
 This can be run daily from a task schedule.
 
 ```
-#Number of days for certificate expiration threshold
+# Number of days for certificate expiration threshold
 $Threshold = 30
  
-#Deadline in comparison with current date
+# Deadline in comparison with current date
 $Deadline = (Get-Date).AddDays($Threshold)
  
-#Email parameters
+# Email parameters
 $SMTPServer = "your.smtp.server"
 $From = "noreply@yourdomain.com"
 $To = "email@yourdomain.com"
@@ -32,17 +32,17 @@ $a = $a + "TD{display: table-cell;height: 25px;vertical-align: inherit;border-bo
 $a = $a + "P{font-family:Arial;position: absolute;}"
 $a = $a + "</style>"
 
-#Create temp csv file
+# Create temp csv file
 $Date = Get-Date -Format "yyMMdd"
 $ReportPath = Join-Path $env:TEMP "CertCheck_$Date.CSV"
 
-#Specific certificate thumbprint to look for
+# Specific certificate thumbprint to look for
 $tmbprt = "a909502dd82ae41433e6f83886b00d4277a32a7b", "886b00d4277a32a7ba909502dd82ae41433e6f83"
 
-#Get all certificates from all stores
+# Get all certificates from all stores
 $Certificates = Get-ChildItem Cert: -Recurse | Where-Object {$_.Thumbprint -in $tmbprt -and $_.Subject -ne $null}
  
-#List all certificates within defined treashold creating PS objects
+# List all certificates within defined treashold creating PS objects
 $Report =@()
 ForEach ($Certificate in $Certificates) {
  
@@ -56,7 +56,7 @@ ForEach ($Certificate in $Certificates) {
     }
 }
  
-#region If any certificates corresponds to treshold criteria create and email report...
+# region If any certificates corresponds to treshold criteria create and email report...
  
 If (($Report | Measure-Object).Count -gt 0) {
         $Report | Select-Object CertificateSubject, Thumbprint, ExpiresAfter, ExpiresIn | Sort ExpiresAfter | Export-CSV -Path $ReportPath -NoTypeInformation
@@ -96,9 +96,9 @@ If (($Report | Measure-Object).Count -gt 0) {
     Send-MailMessage @SMTPMessage -Body ("$htmlcontents") -Priority High -BodyAsHtml
 }
  
-#endregion
+# endregion
  
-#region   System clenup...
+# region   System clenup...
  
 Try {
     Remove-Item $ReportPath, $htmltemp -ErrorAction Stop
@@ -111,6 +111,6 @@ Catch {
 Remove-Variable Treshold, Deadline, Certificates, Report, Date -ErrorAction SilentlyContinue
 Remove-Variable SMTPServer, From, To, Subject, Body -ErrorAction SilentlyContinue
  
-#endregion
+# endregion
 
 ```
