@@ -1,8 +1,8 @@
-## Check and notify through email for local expiering certificates
+## Check and notify through email for local expiring certificates
 
-This script will look for certificates matching the given thumbprints, check and send an email if is expiering within the next 30 days.
+This script will look for certificates matching the given thumbprints, check and send an email if is expiring within the next 30 days.
 
-This was usefull to me after a start-up company had an issue where one of the early sysadmins left months prior and no one knew about this certificate expiration.
+This was useful to me after a start-up company had an issue where one of the early sysadmins left months prior and no one knew about this certificate expiration.
 
 In my case found two undocumented certificates and created this script to alert if they were expiring.
 
