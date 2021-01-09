@@ -9,7 +9,7 @@
 
 #>
 #Email parameters
-$SMTPServer = "yourdomain-com.mail.protection.outlook.com"
+$SMTPServer = "your.smtp.server"
 $From = "noreply@yourdomain.com"
 $To = "inf-alerts@yourdomain.com"
 $Subject = "Physical Disk Weekly report for $(Get-Date -Format "MM.dd.yyyy") on $env:COMPUTERNAME"
