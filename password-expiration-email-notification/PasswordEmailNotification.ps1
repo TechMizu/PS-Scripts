@@ -3,7 +3,7 @@
 
   NAME:      PasswordEmailNotification.ps1
 
-  AUTHOR:    Tech Mizu | herewas@myoldemail.com
+  AUTHOR:    Tech Mizu | https://github.com/TechMizu
 
   CREATED:   03/29/2017
   

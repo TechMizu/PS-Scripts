@@ -14,7 +14,7 @@ You can remove your email from the bcc field to not get each of the emails but I
 
   NAME:      PasswordEmailNotification.ps1
 
-  AUTHOR:    Tech Mizu | herewas@myoldemail.com
+  AUTHOR:    Tech Mizu | https://github.com/TechMizu
 
   CREATED:   03/29/2017
   
