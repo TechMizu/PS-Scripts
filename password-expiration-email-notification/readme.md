@@ -4,24 +4,12 @@ Users at your company keep ignoring, missing or "not getting" the Windows notifi
 
 With this script you can spam their mailbox and reduce the chances of them not changing their password in time by 2%. Because many will still not change it in time...
 
+The script check for two type of user in AD, one in the remote group meaning someone working for home not connected to the network physically or over vpn and that could only update password from Office365 portal, and the other for those who are working from an office or over vpn being able to update their password from windows.
 
 You can remove your email from the bcc field to not get each of the emails but I had it for testing.
 
 
 ```
-<#
-.NOTES
-
-  NAME:      PasswordEmailNotification.ps1
-
-  AUTHOR:    Tech Mizu | https://github.com/TechMizu
-
-  CREATED:   03/29/2017
-  
-.DESCRIPTION
-
-  Notifies Domain users  thier password will expire in 14,7,3 days
-#>
 
 Import-Module ActiveDirectory
 
